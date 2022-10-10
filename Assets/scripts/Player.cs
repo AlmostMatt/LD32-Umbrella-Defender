@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Player : Unit {
 	public const string UMBRELLA_PATH = "shoulder/hand/umbrellaHead/umbrella";
@@ -107,6 +108,6 @@ public class Player : Unit {
 	
 	IEnumerator deathWait() {
 		yield return new WaitForSeconds(5f);
-		Application.LoadLevel("menu");
+		SceneManager.LoadScene("menu");
 	}
 }

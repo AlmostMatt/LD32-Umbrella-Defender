@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class LoadOnClick : MonoBehaviour {
 	
@@ -8,6 +9,6 @@ public class LoadOnClick : MonoBehaviour {
 	public Button play;
 
 	void Start() {
-		play.onClick.AddListener(() => { Application.LoadLevel("2d"); });
+		play.onClick.AddListener(() => { SceneManager.LoadScene("2d"); });
 	}
 }

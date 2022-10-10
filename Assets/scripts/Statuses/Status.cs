@@ -21,7 +21,7 @@ public class Status
 			owner.canTurn = false;
 			break;
 		case State.SWUNG_RECENTLY:
-			owner.transform.FindChild(Player.UMBRELLA_PATH).gameObject.layer = 12; // UmbrellaClosed
+			owner.transform.Find(Player.UMBRELLA_PATH).gameObject.layer = 12; // UmbrellaClosed
 			//Transform t = owner.transform.FindChild(Player.TRAIL_PATH);
 			//t.GetComponent<TrailRenderer>().time = 0.5f;
 			break;
@@ -34,7 +34,7 @@ public class Status
 			owner.canTurn = true;
 			break;
 		case State.SWUNG_RECENTLY:
-			owner.transform.FindChild(Player.UMBRELLA_PATH).gameObject.layer = 9; // UmbrellaClosed
+			owner.transform.Find(Player.UMBRELLA_PATH).gameObject.layer = 9; // UmbrellaClosed
 			owner.GetComponent<Animator>().SetBool("closed", false);
 			//Transform t = owner.transform.FindChild(Player.TRAIL_PATH);
 			//t.GetComponent<TrailRenderer>().time = 0f;

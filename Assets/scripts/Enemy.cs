@@ -82,13 +82,13 @@ public class Enemy : Unit {
 					player.damage(1);
 					break;
 				case EType.RANGE:
-					gun = transform.FindChild("1/gun");
+					gun = transform.Find("1/gun");
 					bullet = fireGun(gun, 7f, 20f);
 					bullet.setTarget(player.transform.position);
 					break;
 				case EType.CLUSTER:
 					for (int n=1; n<=4; n++) {
-						gun = transform.FindChild("2/gun" + n);
+						gun = transform.Find("2/gun" + n);
 						bullet = fireGun(gun, 6f, 4f);
 						bullet.setTarget(player);
 					}

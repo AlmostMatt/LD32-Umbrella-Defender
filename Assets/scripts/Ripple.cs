@@ -19,9 +19,10 @@ public class Ripple : MonoBehaviour {
 
 		// for ripples
 		lineRenderer = GetComponent<LineRenderer>();
-		//lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
-		lineRenderer.SetWidth(0.03F, 0.03F);
-		lineRenderer.SetVertexCount(Ripple.NUM_POINTS + 1); // loop
+        //lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+        lineRenderer.startWidth = 0.03F;
+        lineRenderer.endWidth = 0.03F;
+		lineRenderer.positionCount = Ripple.NUM_POINTS + 1; // loop
 
 		//Material/ whiteDiffuseMat = new Material(Shader.Find("Unlit/Texture"));
 		//Material mat = new Material(Shader.Find("Particles/Additive"));
@@ -54,8 +55,9 @@ public class Ripple : MonoBehaviour {
 	public void render() {
 		//	Drawing.DrawLine(new Vector2(0,0), new Vector2(10,10), Color.black, 1f);
 		Color col = new Color(1f, 1f, 1f, 0.1f + duration/4f);
-		//Debug.Log (duration);
-		lineRenderer.SetColors(col, col);
+        //Debug.Log (duration);
+        lineRenderer.startColor = col;
+        lineRenderer.endColor = col;
 
 		float lastcos = 1f;
 		float lastsin = 0f;

@@ -3,8 +3,7 @@ using System.Collections;
 
 public class E1 : Enemy {
 
-	void Start () {
+	public override void Start () {
 		base.Start();
 	}
-	
 }
