@@ -25,7 +25,7 @@ public class Player : Unit {
 
 		MAX_V = 5;
 		ACCEL = 30;
-		healthBar = GameObject.Find("Canvas/healthBar").GetComponent<UnityEngine.UI.Slider>();
+		healthBar = GameObject.Find("Canvas/HealthGroup/healthBar").GetComponent<UnityEngine.UI.Slider>();
 	}
 	
 	override public void FixedUpdate() {
